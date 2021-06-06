@@ -7,6 +7,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     align-items: center;
 }
 
+.image-container {
+    padding: 0; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.svg-skill{
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+}
+
+#skillset .image-container {
+    height: 15rem; 
+    align-items: center;
+    justify-content: center;
+}
+
+#skillset .image-container img {
+    width: 15rem;
+    border: 20%;
+    padding: 0.5rem; 
+    align-items: center;
+    justify-content: center;
+}
+
+#skillset .image-container img:hover {
+    border-radius: 0rem;
+    opacity: 1.0;
+ }
+
 img.image-mia {
     opacity: 0.8;
     max-width: max-content;
@@ -26,4 +58,22 @@ img.image-mia {
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}
+
+#skillset .image-container {
+    height: 100%;
+    width: 100%;   
+    align-items: center;
+    justify-content: center; 
+}
+}
+
+@media only screen and (max-width: 992px) {#main {margin-left: 0}
+
+#skillset .image-container {
+    height: 100%;
+    width: 100%;    
+    align-items: center;
+    justify-content: center;
+}
+}
