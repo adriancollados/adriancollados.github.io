@@ -71,6 +71,7 @@
     <h2 class="w3-text-light-grey">Adrián Collados</h2>
     <hr style="width:100%" class="w3-opacity">
     <p>Soy Adrián Collados Martínez, tengo 24 años y soy estudiante de Ingeniería Informática. Actualmente estoy en 4º de carrera.
+      He estado trabajando en la contabilidad de una empresa, repasando albaranes, facturas, haciendo talones, repasando los pagos con los bancos, etc.
       Una de mis aficiones es el deporte, tengo el titulo de entrenador de futbol. 
     </p>
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
@@ -79,51 +80,15 @@
   
   </div>
     
-    <div id="skillset" class="w3-content w3-justify w3-text-grey w3-padding-30">
-      <hr style="width: 100%;" class="w3-opacity">
-      <h3 class="w3-padding-16 w3-text-light-grey">Mis conocimientos</h3>
-      <hr style="width: 100%;" class="w3-opacity">
-      <section class="w3-black section">
-        <div class="container-fluid justify-content-center">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/bootstrap.svg" data-toggle="tooltip" data-placement="top" title="Bootstrap" alt="Bootstrap">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/html.svg" data-toggle="tooltip" data-placement="top" title="Html" alt="Html">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/laravel.svg" data-toggle="tooltip" data-placement="top" title="Laravel" alt="Laravel">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/node.svg" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS y Express">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/mongo.svg" data-toggle="tooltip" data-placement="top" title="MongoDB" alt="MongoDB">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/git.svg" data-toggle="tooltip" data-placement="top" title="GitHub" alt="GitHub">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/css.svg" data-toggle="tooltip" data-placement="top" title="CSS" alt="Css">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                    <img class="svg-skill" src="./img/svg/sublime.svg" data-toggle="tooltip" data-placement="top" title="SublimeText" alt="SublimeText">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                  <img class="svg-skill" src="./img/svg/php_icon_130857.svg" data-toggle="tooltip" data-placement="top" title="PHP" alt="PHP">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                  <img class="svg-skill" src="./img/svg/bitbucket_icon_130979.svg" data-toggle="tooltip" data-placement="top" title="Bitbucket" alt="Bitbucket">
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 image-container">
-                  <img class="svg-skill" src="./img/svg/javascript_icon_130900.svg" data-toggle="tooltip" data-placement="top" title="JavaScript" alt="JavaScript">
-                </div>
-            </div>
-      </section>
+  <!--Skills-->
+  <div id="skillset" class="w3-content w3-text-grey">
+    <hr style="width: 100%;" class="w3-opacity">
+    <h3 class="w3-padding-16 w3-text-light-grey">Mis conocimientos</h3>
+    <hr style="width: 100%;" class="w3-opacity">
+    <section id="proyectos" class="w3-black"></section>
 
-      <hr style="width: 100%;" class="w3-opacity">
-    </div>
+    <hr style="width: 100%;" class="w3-opacity">
+  </div>
     
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
@@ -165,6 +130,60 @@
 </div>
 
 <script>
+
+  const datos = [{
+        "src": "./img/svg/bootstrap.svg",
+        "name": "Bootstrap"
+    }, {
+        "src": "./img/svg/css.svg",
+        "name": "CSS"
+    },{
+        "src":"./img/svg/html.svg",
+        "name": "HTML"
+    }, {
+        "src":"./img/svg/git.svg",
+        "name": "GitHub"
+    },{
+        "src":"./img/svg/mongo.svg",
+        "name": "Mongo"
+    },{
+        "src":"./img/svg/node.svg",
+        "name": "NodeJS"
+    },{
+        "src":"./img/svg/laravel.svg",
+        "name": "Laravel"
+    },{
+        "src":"./img/svg/sublime.svg",
+        "name": "Sublime"
+    },{
+        "src":"./img/svg/php_icon_130857.svg",
+        "name": "PHP"
+    },{
+        "src":"./img/svg/javascript_icon_130900.svg",
+        "name": "JavaScript"
+    },{
+        "src":"./img/svg/npm.svg",
+        "name": "NPM"
+    },{
+        "src":"./img/svg/bitbucket_icon_130979.svg",
+        "name": "Bitbucket"
+    }]
+
+  let proyectos = document.querySelector('#proyectos');
+  function dinamico(src, name){
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = src;
+    let p = document.createElement("name");
+    p.innerHTML = name;
+    div.appendChild(img);
+    div.appendChild(p);
+    proyectos.appendChild(div);
+  }
+
+  datos.forEach(({src, name}) => dinamico(src, name));
+
+
 
   function sendMail() {
       var link = "mailto:" + escape(document.getElementsByName('email').value)

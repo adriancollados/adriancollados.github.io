@@ -1,6 +1,18 @@
 
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
+#proyectos{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+    column-gap: 10%;
+    row-gap: 10%;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+
 .nombre {
     padding: 0;
     text-align: center;
@@ -11,6 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     padding: 0; 
     align-items: center;
     justify-content: center;
+    text-align: center;
     display: flex;
 }
 
